@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+/* Tailwind v4 theme extensions via CSS */
+@theme {
+	--breakpoint-md: 768px;
+	--breakpoint-xl: 1280px;
+	--breakpoint-2xl: 1440px;
+	--breakpoint-3xl: 1600px;
+
+	--color-primary-600: #0f5ca9;
+	--color-primary-700: #0c4a86;
+	--color-accent-500: #22c55e;
+}
+
+:root {
+	--app-bg: 247 250 252; /* rgb */
+	--card-bg: 255 255 255;
+	--text-900: 17 24 39;
+}
+
+html, body, #root {
+	height: 100%;
+}
+
+body {
+	@apply bg-[rgb(var(--app-bg))] text-[rgb(var(--text-900))];
+}
+
+/* .container-1440 {
+
+	@apply w-full mx-auto px-4 md:px-6;
+	max-width: 1440px;
+} */
+
+/* Custom Scrollbar Styles */
+.custom-scrollbar::-webkit-scrollbar {
+	width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+	background: #f1f1f1;
+	border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+	background: #c1c1c1;
+	border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+	background: #a8a8a8;
+}
+
+/* Firefox scrollbar */
+.custom-scrollbar {
+	scrollbar-width: thin;
+	scrollbar-color: #c1c1c1 #f1f1f1;
+}
+
+
+
+
+.no-scrollbar::-webkit-scrollbar {
+	display: none;
+  }
+  .no-scrollbar {
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;     /* Firefox */
+  }
+
+
+
+  .font-nunito {
+  font-family: 'Nunito Sans', sans-serif;
+}
