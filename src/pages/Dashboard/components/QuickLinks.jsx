@@ -19,7 +19,9 @@ const QuickLinks = () => {
   return (
     <div className="w-full bg-white rounded shadow transition-all duration-300">
       <div className="p-2 sm:p-4 border-b border-[#F2F2F2]">
-        <h2 className="text-sm sm:text-base font-bold font-nunito">Quick Links</h2>
+        <h2 className="text-sm sm:text-base font-bold font-primary">
+          Quick Links
+        </h2>
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3 p-2 sm:p-3">
         {linksData.map((link, index) => (
@@ -27,8 +29,14 @@ const QuickLinks = () => {
             key={index}
             className={`flex flex-col items-center justify-center p-1 sm:p-2 rounded ${link.bgColor} transition-all duration-300 hover:scale-105`}
           >
-            <img src={link.icon} alt={link.label} className="mb-1 sm:mb-2 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />
-            <p className="text-[10px] sm:text-xs font-semibold font-nunito text-center truncate w-full">{link.label}</p>
+            <img
+              src={link.icon}
+              alt={link.label}
+              className="mb-1 sm:mb-2 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10"
+            />
+            <p className="text-[10px] sm:text-xs font-semibold font-primary text-center truncate w-full">
+              {link.label}
+            </p>
           </div>
         ))}
       </div>

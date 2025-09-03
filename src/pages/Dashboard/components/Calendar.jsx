@@ -88,7 +88,7 @@ const Calendar = () => {
   ];
 
   return (
-    <div className="w-full h-[862px] bg-white border border-[#F2F2F2] rounded-md shadow-sm flex flex-col transition-all duration-300 font-nunito">
+    <div className="w-full h-[862px] bg-white border border-[#F2F2F2] rounded-md shadow-sm flex flex-col transition-all duration-300 font-primary">
       {/* Header */}
       <div className="flex justify-between items-center border-b p-3 border-[#F2F2F2] flex-shrink-0">
         <h2 className="text-base font-semibold text-[#1E293B]">Calendar</h2>

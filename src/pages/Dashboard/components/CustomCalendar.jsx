@@ -24,32 +24,41 @@ const CustomCalendar = () => {
   // Close year selector when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (yearSelectorRef.current && !yearSelectorRef.current.contains(event.target)) {
+      if (
+        yearSelectorRef.current &&
+        !yearSelectorRef.current.contains(event.target)
+      ) {
         setShowYearSelector(false);
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
   // Sample events data - you can modify this as needed
   const events = {
     "2025-05-04": [{ type: "meeting", color: "#063F6C" }],
-    "2025-05-07": [{ type: "events", color: "#0A7EC2" }, { type: "events", color: "#0A7EC2" }],
-    "2025-05-12": [{ type: "events", color: "#0A7EC2" }, { type: "events", color: "#0A7EC2" }],
+    "2025-05-07": [
+      { type: "events", color: "#0A7EC2" },
+      { type: "events", color: "#0A7EC2" },
+    ],
+    "2025-05-12": [
+      { type: "events", color: "#0A7EC2" },
+      { type: "events", color: "#0A7EC2" },
+    ],
     "2025-05-16": [
       { type: "meeting", color: "#063F6C" },
       { type: "events", color: "#0A7EC2" },
-      { type: "birthday", color: "#F59E0B" }
+      { type: "birthday", color: "#F59E0B" },
     ],
     "2025-05-20": [{ type: "events", color: "#0A7EC2" }],
     "2025-05-28": [
       { type: "meeting", color: "#063F6C" },
       { type: "events", color: "#0A7EC2" },
-      { type: "birthday", color: "#F59E0B" }
+      { type: "birthday", color: "#F59E0B" },
     ],
   };
 
@@ -58,7 +67,7 @@ const CustomCalendar = () => {
     const years = Array.from({ length: 10 }, (_, i) => 2020 + i);
 
     return (
-      <div className="flex justify-between items-center mb-4 font-nunito">
+      <div className="flex justify-between items-center mb-4 font-primary">
         <button
           className="text-gray-600 hover:text-black p-1 rounded hover:bg-gray-100"
           onClick={() => setCurrentDate(subMonths(currentDate, 1))}
@@ -66,30 +75,38 @@ const CustomCalendar = () => {
           <img src={leftArrow} alt="" />
         </button>
         <div className="relative" ref={yearSelectorRef}>
-          <div 
+          <div
             className="flex items-center gap-1 cursor-pointer hover:bg-gray-100 px-2 py-1 rounded"
             onClick={() => setShowYearSelector(!showYearSelector)}
           >
             <h2 className="text-sm font-bold text-gray-800">
               {format(currentDate, "MMMM yyyy")}
             </h2>
-            <span className="text-xs"><img src={downArrow} alt="" /></span>
+            <span className="text-xs">
+              <img src={downArrow} alt="" />
+            </span>
           </div>
-          
+
           {/* Year Selector Dropdown */}
           {showYearSelector && (
-            <div className="absolute top-full left-0 mt-1 bg-white border border-gray-200 rounded-md shadow-lg z-10 min-w-[120px] font-nunito">
+            <div className="absolute top-full left-0 mt-1 bg-white border border-gray-200 rounded-md shadow-lg z-10 min-w-[120px] font-primary">
               <div className="p-2">
-                <div className="text-xs font-semibold text-gray-500 mb-2">Select Year</div>
+                <div className="text-xs font-semibold text-gray-500 mb-2">
+                  Select Year
+                </div>
                 <div className="max-h-40 overflow-y-auto custom-scrollbar">
                   {years.map((year) => (
                     <button
                       key={year}
                       className={`w-full text-left px-2 py-1 text-sm rounded hover:bg-gray-100 transition-colors duration-200 ${
-                        year.toString() === currentYear ? "bg-blue-100 text-blue-600" : "text-gray-700"
+                        year.toString() === currentYear
+                          ? "bg-blue-100 text-blue-600"
+                          : "text-gray-700"
                       }`}
                       onClick={() => {
-                        setCurrentDate(new Date(year, currentDate.getMonth(), 1));
+                        setCurrentDate(
+                          new Date(year, currentDate.getMonth(), 1)
+                        );
                         setShowYearSelector(false);
                       }}
                     >
@@ -116,8 +133,8 @@ const CustomCalendar = () => {
     return (
       <div className="grid grid-cols-7 mb-3">
         {days.map((day, index) => (
-          <div 
-            key={day} 
+          <div
+            key={day}
             className={`text-center text-xs font-medium ${
               day === "Sun" ? "text-red-500" : "text-gray-500"
             }`}
@@ -167,7 +184,7 @@ const CustomCalendar = () => {
                 {format(day, "d")}
               </span>
             </div>
-            
+
             {/* Event indicators - outside the background */}
             {dayEvents.length > 0 && (
               <div className="flex gap-1 mt-1 justify-center">
@@ -200,9 +217,9 @@ const CustomCalendar = () => {
       {renderHeader()}
       {renderDays()}
       {renderCells()}
-      
+
       {/* Legend */}
-      <div className="flex flex-wrap gap-4 mt-4 text-xs text-gray-600 font-nunito">
+      <div className="flex flex-wrap gap-4 mt-4 text-xs text-gray-600 font-primary">
         <span className="flex items-center">
           <span className="w-1.5 xl:w-1.5 2xl:w-2 h-1.5 xl:h-1.5 2xl:h-2 bg-[#063F6C] rounded-xs 2xl:rounded-xs mr-2"></span>
           Meeting

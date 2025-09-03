@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/skoolnest.png";
-import schoolLogo from "../assets/school.svg";
+import schoolLogo from "../assets/icons/DeenNest.svg";
 import blackDashboardIcon from "../assets/icons/blackicon.svg";
 import whiteDashboardIcon from "../assets/icons/Icons.svg"; // Add your white icon
 
@@ -44,10 +44,10 @@ const Sidebar = () => {
     <div className="fixed left-0 top-0 h-screen w-[200px] xl:w-[240px] 2xl:w-[280px] bg-white border-r border-[#F2F2F2] z-20 flex flex-col">
       {/* Logo Section */}
       <div className="p-4 flex flex-col items-center">
-        <img src={logo} alt="Logo" className="mb-4 w-32" />
+        <img src={schoolLogo} alt="Logo" className="mb-4 w-32" />
         <div className="flex items-center w-full bg-[#F2F2F2] p-2 rounded-lg mb-6">
           <img src={schoolLogo} alt="School Logo" className="w-8 h-8 mr-2" />
-          <p className=" text-sm font-semibold text-gray-700 font-nunito">
+          <p className=" text-sm font-semibold text-gray-700 font-primary">
             Bright Future Academy
           </p>
         </div>
@@ -60,7 +60,7 @@ const Sidebar = () => {
             <NavLink
               to={item.path}
               className={({ isActive }) =>
-                `flex items-center p-2 rounded-lg transition-colors duration-200 font-nunito ${
+                `flex items-center p-2 rounded-lg transition-colors duration-200 font-primary ${
                   isActive
                     ? "bg-[#063F6C] text-white font-semibold"
                     : "hover:bg-gray-100 text-gray-600"

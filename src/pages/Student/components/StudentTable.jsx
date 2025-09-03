@@ -43,17 +43,16 @@ const StudentTable = () => {
     },
   ];
 
-   const navigate = useNavigate();
+  const navigate = useNavigate();
 
-
-   const handleViewStudent = (student) => {
+  const handleViewStudent = (student) => {
     // Redirect to detail page
-    navigate(`/students/${student.grNo}`, { state: { student } }); 
+    navigate(`/students/${student.grNo}`, { state: { student } });
     // passing student object via state (optional)
   };
 
   return (
-    <div className="flex flex-col mt-4 bg-white shadow-md rounded-md w-full font-nunito">
+    <div className="flex flex-col mt-4 bg-white shadow-md rounded-md w-full font-primary">
       {/* Header */}
       <div className="flex w-full justify-between items-center text-[#1E293B] text-bold border-b border-[#F2F2F2]  p-4">
         <h2>Student Details</h2>
@@ -61,7 +60,7 @@ const StudentTable = () => {
           <input
             type="text"
             placeholder="Search"
-            className="border border-[#F2F2F2] px-2.5 rounded-sm placeholder:text-[10px]" 
+            className="border border-[#F2F2F2] px-2.5 rounded-sm placeholder:text-[10px]"
           />
           <img src={filter} alt="" className="bg-[#063F6C] p-2  rounded-sm" />
           <img src={sort} alt="" className="bg-[#063F6C] p-2 rounded-sm" />

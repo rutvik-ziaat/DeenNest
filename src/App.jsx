@@ -4,7 +4,8 @@ import DashboardPage from "./pages/Dashboard/DashboardPage.jsx";
 import Sidebar from "./shared/Sidebar.jsx";
 import Navbar from "./shared/Navbar.jsx";
 import StudentPage from "./pages/Student/StudentPage.jsx";
-import StudentDetail from "./pages/Student/StudentDetail.jsx";
+import StudentDetail from "./pages/Student/SubPages/StudentDetail.jsx";
+
 
 const App = () => {
   return (

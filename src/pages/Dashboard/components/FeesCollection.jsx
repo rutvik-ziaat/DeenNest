@@ -82,10 +82,10 @@ const FeesCollection = () => {
         cornerRadius: 6,
         displayColors: true,
         callbacks: {
-          label: function(context) {
+          label: function (context) {
             return `${context.dataset.label}: ${context.parsed.y}`;
-          }
-        }
+          },
+        },
       },
     },
     scales: {
@@ -118,9 +118,9 @@ const FeesCollection = () => {
           },
           color: "#6B7280",
           stepSize: 50,
-          callback: function(value) {
+          callback: function (value) {
             return value;
-          }
+          },
         },
         border: {
           display: false,
@@ -129,12 +129,12 @@ const FeesCollection = () => {
     },
     interaction: {
       intersect: false,
-      mode: 'index',
+      mode: "index",
     },
   };
 
   return (
-    <div className="w-full bg-white border border-[#F2F2F2] rounded-md shadow-sm font-nunito">
+    <div className="w-full bg-white border border-[#F2F2F2] rounded-md shadow-sm font-primary">
       {/* Header */}
       <div className="flex justify-between items-center border-b p-3 border-[#F2F2F2]">
         <h2 className="text-sm font-semibold text-[#1E293B]">

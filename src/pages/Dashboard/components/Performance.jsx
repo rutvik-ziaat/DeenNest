@@ -6,8 +6,8 @@ import averageIcon from "../../../assets/icons/average.svg";
 
 const data = [
   { name: "Excellent", value: 45, color: "#3B82F6" }, // blue
-  { name: "Good", value: 11, color: "#F59E0B" },      // orange
-  { name: "Average", value: 2, color: "#EF4444" },    // red
+  { name: "Good", value: 11, color: "#F59E0B" }, // orange
+  { name: "Average", value: 2, color: "#EF4444" }, // red
 ];
 
 // Custom tooltip with color background
@@ -29,8 +29,7 @@ const CustomTooltip = ({ active, payload }) => {
 
 const Performance = () => {
   return (
-    <div className="w-full bg-white border border-[#F2F2F2] rounded-md shadow-sm flex flex-col transition-all duration-300 font-nunito">
-      
+    <div className="w-full bg-white border border-[#F2F2F2] rounded-md shadow-sm flex flex-col transition-all duration-300 font-primary">
       {/* Header */}
       <div className="flex justify-between items-center p-2 sm:p-3 border-b border-[#F2F2F2]">
         <h2 className="text-sm sm:text-base font-semibold text-[#1E293B] truncate">
@@ -43,7 +42,7 @@ const Performance = () => {
         </select>
       </div>
 
-      <div className="flex p-2 sm:p-3 font-nunito gap-2 sm:gap-4 flex-1 min-h-0">
+      <div className="flex p-2 sm:p-3 font-primary gap-2 sm:gap-4 flex-1 min-h-0">
         {/* Left Stats */}
         <div className="flex flex-col gap-1 sm:gap-2 flex-1 min-w-0">
           {[
