@@ -1,10 +1,10 @@
 import React from "react";
-import attendance from "../../../assets/icons/attendance.svg";
-import calendar from "../../../assets/icons/calendar.svg";
-import examresult from "../../../assets/icons/examresult.svg";
-import fees from "../../../assets/icons/fees.svg";
-import reports from "../../../assets/icons/reports.svg";
-import homework from "../../../assets/icons/homework.svg";
+import attendance from "../../assets/icons/attendance.svg";
+import calendar from "../../assets/icons/calendar.svg";
+import examresult from "../../assets/icons/examresult.svg";
+import fees from "../../assets/icons/fees.svg";
+import reports from "../../assets/icons/reports.svg";
+import homework from "../../assets/icons/homework.svg";
 
 const QuickLinks = () => {
   const linksData = [

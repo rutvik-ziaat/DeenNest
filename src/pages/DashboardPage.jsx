@@ -1,14 +1,16 @@
 import React from "react";
-import Welcome from "./components/Welcome";
-import Stats from "./components/Stats";
-import QuickLinks from "./components/QuickLinks";
-import Performance from "./components/Performance";
-import Attendance from "./components/Attendance";
-import Calendar from "./components/Calendar";
-import FeesCollection from "./components/FeesCollection";
-import QuickLinks2 from "./components/QuickLinks2";
-import NoticeBoard from "./components/NoticeBoard";
-import FeesCollected from "./components/FeesCollected";
+import Welcome from "../components/Dashboard/Welcome";
+
+import QuickLinks from "../components/Dashboard/QuickLinks";
+import Performance from "../components/Dashboard/Performance";
+import FeesCollection from "../components/Dashboard/FeesCollection";
+import Calendar from "../components/Dashboard/Calendar";
+import QuickLinks2 from "../components/Dashboard/QuickLinks2";
+import NoticeBoard from "../components/Dashboard/NoticeBoard";
+import FeesCollected from "../components/Dashboard/FeesCollected";
+import Stats from "../components/Dashboard/Stats";
+import Attendance from "../components/Dashboard/Attendance";
+
 
 const DashboardPage = () => {
   return (

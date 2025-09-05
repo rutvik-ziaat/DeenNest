@@ -1,8 +1,8 @@
 import React from "react";
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
-import excellentIcon from "../../../assets/icons/excellent.svg";
-import goodIcon from "../../../assets/icons/good.svg";
-import averageIcon from "../../../assets/icons/average.svg";
+import excellentIcon from "../../assets/icons/excellent.svg";
+import goodIcon from "../../assets/icons/good.svg";
+import averageIcon from "../../assets/icons/average.svg";
 
 const data = [
   { name: "Excellent", value: 45, color: "#3B82F6" }, // blue

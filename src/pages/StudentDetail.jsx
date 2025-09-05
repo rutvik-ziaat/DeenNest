@@ -71,19 +71,16 @@
 
 // export default StudentDetail;
 
-
-
-
 import React, { useState } from "react";
-import StudentInfo from "../../../components/Student/StudentInfo";
-import ContactInfo from "../../../components/Student/ContactInfo";
-import Transportation from "../../../components/Student/Transportation";
+import StudentInfo from "../components/Student/StudentInfo";
+import ContactInfo from "../components/Student/ContactInfo";
+import Transportation from "../components/Student/Transportation";
 
-import StudentParents from "../../../components/Student/StudentParents";
-import StudentDocument from "../../../components/Student/StudentDocument";
-import PreviousSchoolDetail from "../../../components/Student/PreviousSchoolDetail";
-import BankDetails from "../../../components/Student/BankDetails";
-import OtherDetail from "../../../components/Student/OtherDetail";
+import StudentParents from "../components/Student/StudentParents";
+import StudentDocument from "../components/Student/StudentDocument";
+import PreviousSchoolDetail from "../components/Student/PreviousSchoolDetail";
+import BankDetails from "../components/Student/BankDetails";
+import OtherDetail from "../components/Student/OtherDetail";
 
 const StudentDetail = () => {
   const [activeTab, setActiveTab] = useState("studentDetails"); // default tab
@@ -92,7 +89,9 @@ const StudentDetail = () => {
     <div className="flex flex-col gap-4">
       <div className="flex justify-between items-center">
         <h2 className="font-bold text-xl">Student</h2>
-        <button className="text-sm font-semibold px-4 py-1 rounded-md hover:text-[#1E293B] bg-[#063F6C] text-white">Edit Student</button>
+        <button className="text-sm font-semibold px-4 py-1 rounded-md hover:text-[#1E293B] bg-[#063F6C] text-white">
+          Edit Student
+        </button>
       </div>
 
       <div className="flex gap-4">
@@ -216,4 +215,3 @@ const StudentDetail = () => {
 };
 
 export default StudentDetail;
-

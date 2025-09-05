@@ -1,9 +1,9 @@
 import React from "react";
 import { ChevronRight } from "lucide-react";
-import attendance2 from "../../../assets/icons/attendance2.svg";
-import event from "../../../assets/icons/event.svg";
-import membership from "../../../assets/icons/membership.svg";
-import finance from "../../../assets/icons/finance.svg";
+import attendance2 from "../../assets/icons/attendance2.svg";
+import event from "../../assets/icons/event.svg";
+import membership from "../../assets/icons/membership.svg";
+import finance from "../../assets/icons/finance.svg";
 
 const QuickLinks2 = () => {
   const quickLinks = [

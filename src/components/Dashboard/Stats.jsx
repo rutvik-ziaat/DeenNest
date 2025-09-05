@@ -1,8 +1,8 @@
 import React from "react";
-import totalstudent from "../../../assets/icons/totalstudent.svg";
-import totalteacher from "../../../assets/icons/totalteacher.svg";
-import totalstaff from "../../../assets/icons/totalstaff.svg";
-import totalsubject from "../../../assets/icons/totalsubject.svg";
+import totalstudent from "../../assets/icons/totalstudent.svg";
+import totalteacher from "../../assets/icons/totalteacher.svg";
+import totalstaff from "../../assets/icons/totalstaff.svg";
+import totalsubject from "../../assets/icons/totalsubject.svg";
 
 const Stats = () => {
   const statsData = [

@@ -1,9 +1,9 @@
 import React from "react";
-import nf1 from "../../../assets/icons/nf1.svg";
-import nf2 from "../../../assets/icons/nf2.svg";
-import nf3 from "../../../assets/icons/nf3.svg";
-import nf4 from "../../../assets/icons/nf4.svg";
-import nf5 from "../../../assets/icons/nf5.svg";
+import nf1 from "../../assets/icons/nf1.svg";
+import nf2 from "../../assets/icons/nf2.svg";
+import nf3 from "../../assets/icons/nf3.svg";
+import nf4 from "../../assets/icons/nf4.svg";
+import nf5 from "../../assets/icons/nf5.svg";
 
 const NoticeBoard = () => {
   const notices = [

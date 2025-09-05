@@ -11,9 +11,9 @@ import {
   isSameMonth,
   isSameDay,
 } from "date-fns";
-import leftArrow from "../../../assets/icons/lessthan.svg";
-import rightArrow from "../../../assets/icons/greaterthan.svg";
-import downArrow from "../../../assets/icons/downarrow.svg";
+import leftArrow from "../../assets/icons/lessthan.svg";
+import rightArrow from "../../assets/icons/greaterthan.svg";
+import downArrow from "../../assets/icons/downarrow.svg";
 
 const CustomCalendar = () => {
   const [currentDate, setCurrentDate] = useState(new Date(2025, 4, 16)); // May 2025

@@ -1,11 +1,14 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import DashboardPage from "./pages/Dashboard/DashboardPage.jsx";
+
 import Sidebar from "./shared/Sidebar.jsx";
 import Navbar from "./shared/Navbar.jsx";
-import StudentPage from "./pages/Student/StudentPage.jsx";
-import StudentDetail from "./pages/Student/SubPages/StudentDetail.jsx";
-
+import StudentPage from "./pages/StudentPage.jsx";
+import StudentDetail from "./pages/StudentDetail.jsx";
+import DashboardPage from "./pages/DashboardPage.jsx";
+import ConfigurationPage from "./pages/ConfigurationPage.jsx";
+import TeacherPage from "./pages/TeacherPage.jsx";
+import TeacherDetails from "./pages/TeacherDetails.jsx";
 
 const App = () => {
   return (
@@ -23,7 +26,10 @@ const App = () => {
           <Routes>
             <Route path="/" element={<DashboardPage />} />
             <Route path="/students" element={<StudentPage />} />
-             <Route path="/students/:grNo" element={<StudentDetail />} />
+            <Route path="/students/:grNo" element={<StudentDetail />} />
+            <Route path="/teachers" element={<TeacherPage />} />
+            <Route path="/teachers/:id" element={<TeacherDetails />} />
+            <Route path="/configuration" element={<ConfigurationPage />} />
             {/* Add more routes here */}
           </Routes>
         </main>

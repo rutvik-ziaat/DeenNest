@@ -37,6 +37,13 @@ const menuItems = [
     iconActive: whiteDashboardIcon,
     path: "/subjects",
   },
+  {
+    name: "Configuration",
+    iconDefault: blackDashboardIcon,
+    iconActive: whiteDashboardIcon,
+    path: "/configuration",
+  }
+
 ];
 
 const Sidebar = () => {
