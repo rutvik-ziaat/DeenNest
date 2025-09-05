@@ -25,7 +25,7 @@ const Attendance = () => {
           </p>
         </div>
       );
-    }
+    } 
     return null;
   };
 
@@ -93,7 +93,7 @@ const Attendance = () => {
                 <Cell key={`cell-${index}`} fill={entry.color} />
               ))}
             </Pie>
-            <Tooltip content={<CustomTooltip />} />
+            <Tooltip content={<CustomTooltip />}  position={{ x: 150, y: 100 }} />
           </PieChart>
         </ResponsiveContainer>
         <div className="absolute text-center">

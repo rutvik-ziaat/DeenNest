@@ -103,7 +103,7 @@ const StudentDetail = () => {
         </div>
 
         {/* Right Section */}
-        <div className="flex flex-col gap-4 flex-1 ">
+        <div className="flex flex-col gap-4 flex-1 font-primary ">
           {/* Tab Buttons */}
           <div className="flex items-start gap-8">
             <button
